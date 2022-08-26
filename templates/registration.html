@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h3 class="text-center">Register yourself Here</h3>
+<hr class="my-2">
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <form action="" method="POST">
+                {% csrf_token %}
+                <input type="text" name="username" class="form-control" placeholder="Enter username...">
+                <input type="text" name="first_name" class="form-control" placeholder="Enter your first name...">
+                <input type="text" name="last_name" class="form-control" placeholder="Enter your Last name...">
+                <input type="email" name="email" class="form-control" placeholder="Enter your first name...">
+                <input type="password" name="pass1" class="form-control" placeholder="Create your password...">
+                <input type="password" name="pass2" class="form-control" placeholder="Confirm password...">
+                Already Registered please login<a href="{% url 'login_page' %}">Here</a>
+                <center>
+                    <button type="submit" class="btn btn-outline-success">Register</button>
+                    <button type="reset" class="btn btn-outline-danger">Clear</button>
+                </center>
+            </form> 
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

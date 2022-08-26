@@ -1,0 +1,65 @@
+{% extends "base1.html" %}
+
+
+{% block title %}Create Poll{% endblock %}
+
+{% block main %}
+<div class="row">
+    <div class="col-lg-8 col-lg-offset-2">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Create A New Poll</h3>
+            </div>
+                
+            <form method="POST">
+                {% csrf_token %}
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="form-group">
+                                <label for="question">Enter Poll Question</label>
+                                <input type="text" class="form-control" name="question" placeholder="Enter your questions">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-3">
+                            <div class="form-group">
+                                <label for="option1">Option 1</label>
+                                <input type="text" class="form-control" name="opt1" placeholder="Enter First option">
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="form-group">
+                                <label for="option2">Option 2</label>
+                                <input type="text" class="form-control" name="opt2" placeholder="Enter Second option">
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="form-group">
+                                <label for="option3">Option 3</label>
+                                <input type="text" class="form-control" name="opt3" placeholder="Enter Third option">
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="form-group">
+                                <label for="option3">Option 4</label>
+                                <input type="text" class="form-control" name="opt4" placeholder="Enter Forth option">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <hr />
+                        <div class="col-lg-4">
+                            <button type="submit" class="btn btn-info">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
+{% endblock %}
